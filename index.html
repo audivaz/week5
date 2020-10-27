@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Styles -->
+		<link rel="stylesheet" href="css/style.css" />
+		<!-- Scripts -->
+		<script src="hmwk.js" defer></script>
+		<!-- Font Awesome -->
+		<script
+			src="https://kit.fontawesome.com/47ace9daa2.js"
+
+		></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<nav>
+            <button id="logout">Logout</button>
+			<span id="user"></span>
+            <i class="fas fa-user"></i>
+        </nav>
+
+		<form id = "form" action="">
+			<h1>Login</h1>
+
+			<label for="username" id='userLabel'>Username</label>
+			<input id="username" type="text" pattern="^([a-zA-Z])[a-zA-Z_-]*[\w_-]*[\S]$|^([a-zA-Z])[0-9_-]*[\S]$|^[a-zA-Z]*[\S]$"/>
+
+			<label for="password" id="passLabel">Password</label>
+			<input id="password" type="password" minlength="6" maxlength="10"/>
+
+			<div id="remember">
+				<input type="checkbox" id="checkbox" />
+				<label for="checkbox">Remember me</label>
+			</div>
+
+			<button type="submit" id='submitBtn'>Sign In</button>
+
+			<p>Don't have an account? <span class="blue">Sign up</span></p>
+			<p><span class="blue">Forgot Password?</span></p>
+		</form>
+	</body>
