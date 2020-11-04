@@ -1,0 +1,58 @@
+<!--! There are many ways to improve this, but this is my by the prompt solution. I can show some better ways to implement this sometime if you think that would be beneficial. For now I just went through and explained what was happening on each code block to explain the homework assignment since you seemed to be having some trouble with it. -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Styles -->
+		<link rel="stylesheet" href="styles.css" />
+		<!-- Scripts -->
+		<script src="app1.js" defer></script>
+		<!-- Font Awesome -->
+		<script
+			src="https://kit.fontawesome.com/47ace9daa2.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<nav>
+			<button id="logout">Logout</button>
+			<span id="user"></span>
+			<i class="fas fa-user"></i>
+		</nav>
+
+		<form action="">
+			<h1>Login</h1>
+
+			<label for="username">Username</label>
+			<!--! Using required to ensure the field isn't blank & pattern to enforce a pattern the user must match to accept the input -->
+			<input
+				id="username"
+				type="text"
+				required
+				pattern="^([a-zA-Z])[a-zA-Z_-]*[\w_-]*[\S]$|^([a-zA-Z])[0-9_-]*[\S]$|^[a-zA-Z]*[\S]$"
+			/>
+
+			<label for="password">Password</label>
+			<!--! Using required to ensure the field isn't blank & pattern to enforce a pattern the user must match to accept the input -->
+			<input
+				id="password"
+				type="password"
+				required
+				minlength="6"
+				maxlength="10"
+			/>
+
+			<div id="remember">
+				<input type="checkbox" id="checkbox" />
+				<label for="checkbox">Remember me</label>
+			</div>
+
+			<button type="submit">Sign In</button>
+
+			<p>Don't have an account? <span class="blue">Sign up</span></p>
+			<p><span class="blue">Forgot Password?</span></p>
+		</form>
+	</body>
+</html>
